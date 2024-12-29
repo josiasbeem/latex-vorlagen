@@ -1,3 +1,3 @@
 # LaTeX Templates
 
-I am too lazy to rewrite the same code every time.
+Because I'm too lazy to rewrite the same code every time.
