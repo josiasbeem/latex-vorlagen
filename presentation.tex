@@ -1,16 +1,18 @@
 % xelatex
 
-\documentclass[beamer]
+\documentclass{beamer}
 \usepackage[naustrian]{babel}
-\usepackage{amsmath, booktabs, cancel, csquotes, enumitem, fontspec, graphicx, hyperref, microtype, unicode-math}
+\usepackage{amsmath, cancel, csquotes, enumitem, fontspec, graphicx, hyperref, microtype, unicode-math, xcolor}
+% \usepackage[backend=biber, style=authoryear]{biblatex}
 
 \setmainfont{STIX Two Text}
 \setmathfont{STIX Two Math}
 \setsansfont{Roboto}
-\geometry{paperwidth=16cm, paperheight=9cm}
+\usetheme{SimplePlus}
 \setbeamercolor{title}{fg=black}
 \setbeamercolor{frametitle}{fg=black}
 \setbeamertemplate{navigation symbols}{}
+\geometry{paperwidth=16cm, paperheight=9cm}
 
 \title{Titel}
 \author{Autor}
@@ -22,6 +24,9 @@
     \titlepage
 \end{frame}
 
-% Inhalt
+\begin{frame}
+    \frametitle{Titel der Folie}
+    % Inhalt
+\end{frame}
 
 \end{document}
