@@ -2,24 +2,49 @@
 
 \documentclass[a4paper]{scrartcl}
 \usepackage[naustrian]{babel}
-\usepackage{amsmath, cancel, csquotes, enumitem, fontspec, graphicx, hyperref, microtype, unicode-math, xcolor}
-% \usepackage[backend=biber, style=authoryear]{biblatex}
+\usepackage{
+    amsmath,
+    cancel,
+    csquotes,
+    enumitem,
+    fontspec,
+    graphicx,
+    hyperref,
+    microtype,
+    unicode-math,
+    xcolor
+}
+\usepackage[
+    backend = biber,
+    style = authoryear
+]{biblatex}
 
 \setmainfont{STIX Two Text}
 \setmathfont{STIX Two Math}
-\setsansfont{Roboto}
+\setsansfont{Lato}
 \setcounter{secnumdepth}{0}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{1em}
+
+\makeatletter
+\AtBeginDocument{
+  \hypersetup{
+    pdftitle = {\@title},
+    pdfauthor = {\@author}
+  }
+}
+\makeatother
+\hypersetup{
+    pdfborder = {0 0 0}
+}
 
 \title{Titel}
 \author{Autor}
-\date{\today}
+\date{}
 
 \begin{document}
 
 \maketitle
 
-% Inhalt
+% ...
 
 \end{document}
+

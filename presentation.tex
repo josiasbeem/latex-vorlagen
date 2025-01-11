@@ -2,21 +2,38 @@
 
 \documentclass{beamer}
 \usepackage[naustrian]{babel}
-\usepackage{amsmath, cancel, csquotes, enumitem, fontspec, graphicx, hyperref, microtype, unicode-math, xcolor}
-% \usepackage[backend=biber, style=authoryear]{biblatex}
+\usepackage{
+    amsmath,
+    cancel,
+    csquotes,
+    enumitem,
+    fontspec,
+    graphicx,
+    hyperref,
+    microtype,
+    unicode-math,
+    xcolor
+}
+\usepackage[
+    backend = biber,
+    style = authoryear
+]{biblatex}
 
 \setmainfont{STIX Two Text}
 \setmathfont{STIX Two Math}
-\setsansfont{Roboto}
+\setsansfont{Lato}
 \usetheme{SimplePlus}
 \setbeamercolor{title}{fg=black}
 \setbeamercolor{frametitle}{fg=black}
-\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[default]
 \geometry{paperwidth=16cm, paperheight=9cm}
+\hypersetup{
+    pdfborder = {0 0 0}
+}
 
 \title{Titel}
 \author{Autor}
-\date{\today}
+\date{}
 
 \begin{document}
 
@@ -26,7 +43,7 @@
 
 \begin{frame}
     \frametitle{Titel der Folie}
-    % Inhalt
+    % ...
 \end{frame}
 
 \end{document}
