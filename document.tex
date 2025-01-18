@@ -1,4 +1,6 @@
-% xelatex
+% XeLaTeX or LuaLaTeX
+
+% --------------- CONFIG START ---------------
 
 \documentclass[a4paper]{scrartcl}
 \usepackage[naustrian]{babel}
@@ -10,20 +12,30 @@
     fontspec,
     graphicx,
     hyperref,
+    listings,
+    lstfiracode,
     microtype,
     unicode-math,
     xcolor
 }
-\usepackage[
-    backend = biber,
-    style = authoryear
-]{biblatex}
 
 \setmainfont{STIX Two Text}
 \setmathfont{STIX Two Math}
 \setsansfont{Lato}
+\setmonofont{Fira Code}
+
 \setcounter{secnumdepth}{0}
 \setlength{\parindent}{0pt}
+
+\lstset{
+    basicstyle = \ttfamily,
+    keywordstyle = \bfseries,
+    stringstyle = \color{gray},
+    commentstyle = \color{gray},
+    breaklines = true,
+    showstringspaces = false,
+    style = FiraCodeStyle
+}
 
 \makeatletter
 \AtBeginDocument{
@@ -37,8 +49,10 @@
     pdfborder = {0 0 0}
 }
 
-\title{Titel}
-\author{Autor}
+% --------------- CONFIG END ---------------
+
+\title{Title}
+\author{Author}
 \date{}
 
 \begin{document}
