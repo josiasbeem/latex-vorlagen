@@ -5,7 +5,7 @@
 % --------------------------------
 
 \documentclass[
-    paper = a5,
+    paper = a4,
     parskip = full
 ]{scrartcl}
 
@@ -19,6 +19,7 @@
     hyperref,
     listings,
     microtype,
+    scrlayer-scrpage,
     unicode-math,
     xcolor
 }
@@ -27,6 +28,14 @@
 \setmathfont{STIX Two Math}
 \setsansfont{Lato}
 \setmonofont{Inconsolata}
+
+\setcounter{secnumdepth}{0}
+
+\makeatletter
+\ihead{\@author}
+\chead{\@title}
+\ohead{\@date}
+\makeatother
 
 % listings config
 \lstset{
@@ -60,15 +69,13 @@
 \usepackage[english]{babel}
 \title{Title}
 \author{Author}
-\date{}
+\date{\today}
 
 % --------------------------------
 %            CONFIG END
 % --------------------------------
 
 \begin{document}
-
-\maketitle
 
 % ...
 
