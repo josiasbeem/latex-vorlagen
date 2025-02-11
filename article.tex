@@ -1,9 +1,14 @@
 % XeLaTeX or LuaLaTeX
 
-% --------------- CONFIG START ---------------
+% --------------------------------
+%           CONFIG START
+% --------------------------------
 
-\documentclass{beamer}
-\usepackage[naustrian]{babel}
+\documentclass[
+    paper = a5,
+    parskip = full
+]{scrartcl}
+
 \usepackage{
     amsmath,
     cancel,
@@ -23,12 +28,7 @@
 \setsansfont{Lato}
 \setmonofont{Inconsolata}
 
-\usetheme{SimplePlus}
-\setbeamercolor{title}{fg=black}
-\setbeamercolor{frametitle}{fg=black}
-\setbeamertemplate{footline}[default]
-\geometry{paperwidth=16cm, paperheight=9cm}
-
+% listings config
 \lstset{
     basicstyle = \ttfamily,
     keywordstyle = \bfseries,
@@ -40,25 +40,36 @@
     belowskip = 0em
 }
 
+% hyperref config
+\makeatletter
+\AtBeginDocument{
+    \hypersetup{
+        pdftitle = {\@title},
+        pdfauthor = {\@author}
+    }
+}
+\makeatother
 \hypersetup{
     pdfborder = {0 0 0}
 }
 
-% --------------- CONFIG END ---------------
+% --------------------------------
+%          CUSTOMIZATION
+% --------------------------------
 
+\usepackage[english]{babel}
 \title{Title}
 \author{Author}
 \date{}
 
+% --------------------------------
+%            CONFIG END
+% --------------------------------
+
 \begin{document}
 
-\begin{frame}
-    \titlepage
-\end{frame}
+\maketitle
 
-\begin{frame}
-    \frametitle{Frame Title}
-    % ...
-\end{frame}
+% ...
 
 \end{document}
