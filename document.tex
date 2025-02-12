@@ -5,8 +5,9 @@
 % --------------------------------
 
 \documentclass[
-    paper = a5,
-    parskip = full
+    paper = a4,
+    parskip = full,
+    14pt
 ]{scrreprt}
 
 \usepackage{
@@ -33,15 +34,15 @@
 \AtBeginDocument{
     \begin{titlepage}
         \centering
-        \vspace*{2cm}
+        \vspace*{4cm}
         {\Huge\bfseries\textsf{\@title}\par}
-        \vspace{0.5cm}
-        {\Large\textit{\@subtitle}\par}
-        \vspace{2cm}
-        {\Large\textsc{\@author}\par}
         \vspace{1cm}
+        {\Large\textit{\@subtitle}\par}
+        \vspace{3cm}
+        {\Large\textsc{\@author}\par}
+        \vspace{1.5cm}
         {\large\@date\par}
-        \vspace{2cm}
+        \vspace{4cm}
     \end{titlepage}
 }
 \makeatother
