@@ -1,0 +1,67 @@
+% Copyright (c) 2024-2025 Josias Beem
+% SPDX-License-Identifier: MIT
+
+% Compile with XeLaTeX or LuaLaTeX
+
+% --------------------------------
+%           CONFIG START
+% --------------------------------
+
+\documentclass[
+    paper = a4,
+    parskip = full,
+    DIV = 10,
+    12pt
+]{scrreprt}
+
+\usepackage{
+    amsmath,
+    cancel,
+    csquotes,
+    enumitem,
+    fontspec,
+    graphicx,
+    hyperref,
+    listings,
+    microtype,
+    unicode-math,
+    xcolor
+}
+
+\setmainfont{TeX Gyre Schola}
+\setmathfont{TeX Gyre Schola Math}
+\setsansfont{TeX Gyre Schola}
+
+\pagenumbering{gobble}
+
+% listings config
+\lstset{
+    basicstyle = \ttfamily,
+    keywordstyle = \bfseries,
+    stringstyle = \color{gray},
+    commentstyle = \color{gray},
+    showstringspaces = false,
+    aboveskip = 1em,
+    belowskip = 0em
+}
+
+% hyperref config
+\hypersetup{
+    pdfborder = {0 0 0}
+}
+
+% --------------------------------
+%          CUSTOMIZATION
+% --------------------------------
+
+\usepackage[english]{babel}
+
+% --------------------------------
+%            CONFIG END
+% --------------------------------
+
+\begin{document}
+
+% ...
+
+\end{document}
