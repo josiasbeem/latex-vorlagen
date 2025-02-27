@@ -1,3 +1,3 @@
 # LaTeX Templates
 
-Just my awesome LaTeX templates.
+Feel free to use my awesome LaTeX templates :)
