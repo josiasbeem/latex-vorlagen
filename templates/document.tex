@@ -28,9 +28,10 @@
     xcolor
 }
 
-\setmainfont{TeX Gyre Schola}
-\setmathfont{TeX Gyre Schola Math}
-\setsansfont{TeX Gyre Schola}
+\setmainfont{IBM Plex Sans}
+\setmathfont{IBM Plex Math}
+\setsansfont{IBM Plex Sans}
+\setmonofont{IBM Plex Mono}
 
 % titlepage config
 \makeatletter
@@ -42,7 +43,7 @@
         \vspace{0.5cm}
         {\Large\textit{\@subtitle}\par}
         \vspace{3cm}
-        {\Large\textsc{\@author}\par}
+        {\Large\@author\par}
         \vspace{1.5cm}
         {\large\@date\par}
         \vspace{4cm}
@@ -53,9 +54,8 @@
 % listings config
 \lstset{
     basicstyle = \ttfamily,
-    keywordstyle = \bfseries,
     stringstyle = \color{gray},
-    commentstyle = \color{gray},
+    commentstyle = \itshape\color{gray},
     showstringspaces = false,
     aboveskip = 1em,
     belowskip = 0em
