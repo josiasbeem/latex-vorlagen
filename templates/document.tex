@@ -12,7 +12,7 @@
     parskip = full,
     DIV = 10,
     12pt
-]{scrreprt}
+]{scrartcl}
 
 \usepackage{
     amsmath,
@@ -28,7 +28,7 @@
     xcolor
 }
 
-\setmainfont{IBM Plex Sans}
+\setmainfont{IBM Plex Serif}
 \setmathfont{IBM Plex Math}
 \setsansfont{IBM Plex Sans}
 \setmonofont{IBM Plex Mono}
@@ -41,11 +41,11 @@
         \vspace*{3cm}
         {\Huge\bfseries\textsf{\@title}\par}
         \vspace{0.5cm}
-        {\Large\textit{\@subtitle}\par}
-        \vspace{3cm}
-        {\Large\@author\par}
-        \vspace{1.5cm}
-        {\large\@date\par}
+        {\Large\itshape\textsf{\@subtitle}\par}
+        \vspace{2cm}
+        {\Large\textsf{\@author}\par}
+        \vspace{2cm}
+        {\large\textsf{\@date}\par}
         \vspace{4cm}
     \end{titlepage}
 }
