@@ -43,7 +43,7 @@
 
 % listings config
 \lstset{
-    basicstyle = \ttfamily,
+    basicstyle = \linespread{1.2}\ttfamily,
     stringstyle = \color{gray},
     commentstyle = \itshape\color{gray},
     showstringspaces = false,
@@ -80,5 +80,12 @@
 \begin{document}
 
 % ...
+
+\begin{lstlisting}[language=c]
+int main() {
+    printf("test");
+    return 0;
+}
+\end{lstlisting}
 
 \end{document}
