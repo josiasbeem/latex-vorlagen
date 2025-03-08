@@ -1,0 +1,75 @@
+% Copyright (c) 2024-2025 Josias Beem
+% SPDX-License-Identifier: MIT
+
+% --------------------------------
+%           CONFIG START
+% --------------------------------
+
+\documentclass[
+    paper = a4,
+    parskip = full,
+    DIV = 10,
+    12pt
+]{scrartcl}
+
+\usepackage{
+    amsmath,
+    cancel,
+    csquotes,
+    enumitem,
+    graphicx,
+    hyperref,
+    listings,
+    microtype,
+    scrlayer-scrpage,
+    xcolor
+}
+
+\setcounter{secnumdepth}{0}
+
+\makeatletter
+\ihead{\@author}
+\ohead{\@title}
+\makeatother
+
+% listings config
+\lstset{
+    basicstyle = \linespread{1.2}\ttfamily,
+    stringstyle = \color{gray},
+    commentstyle = \itshape\color{gray},
+    showstringspaces = false,
+    aboveskip = 1em,
+    belowskip = 0em
+}
+
+% hyperref config
+\makeatletter
+\AtBeginDocument{
+    \hypersetup{
+        pdftitle = {\@title},
+        pdfauthor = {\@author}
+    }
+}
+\makeatother
+\hypersetup{
+    pdfborder = {0 0 0}
+}
+
+% --------------------------------
+%          CUSTOMIZATION
+% --------------------------------
+
+\usepackage[english]{babel}
+\title{Title}
+\author{Author}
+\date{\today}
+
+% --------------------------------
+%            CONFIG END
+% --------------------------------
+
+\begin{document}
+
+% ...
+
+\end{document}
