@@ -1,8 +1,6 @@
 % Copyright (c) 2024-2025 Josias Beem
 % SPDX-License-Identifier: MIT
 
-% Compile with XeLaTeX or LuaLaTeX
-
 % --------------------------------
 %           CONFIG START
 % --------------------------------
@@ -11,38 +9,29 @@
     paper = a4,
     DIV = 12,
     12pt,
-    parskip = full,
-    headsepline
+    parskip = full
 ]{scrartcl}
 
 \usepackage{
     amsmath,
+    bookmark,
     cancel,
     csquotes,
     enumitem,
-    fontspec,
     graphicx,
     hyperref,
     listings,
     microtype,
     multicol,
-    scrlayer-scrpage,
-    unicode-math,
     xcolor
 }
 
-\setmainfont{TeX Gyre Termes}
-\setmathfont{TeX Gyre Termes Math}
-\setsansfont{TeX Gyre Heros}
-\setmonofont{TeX Gyre Cursor}
+% Fonts config
+\usepackage{newtxtext, newtxmath, tgcursor}
+\usepackage[T1]{fontenc}
 
+\pagenumbering{gobble}
 \setcounter{secnumdepth}{0}
-
-% Page header config
-\makeatletter
-\ihead{\textnormal{\@author}}
-\ohead{\textnormal{\@title}}
-\makeatother
 
 % Listings config
 \lstset{
@@ -55,14 +44,6 @@
 }
 
 % Hyperref config
-\makeatletter
-\AtBeginDocument{
-    \hypersetup{
-        pdftitle = {\@title},
-        pdfauthor = {\@author}
-    }
-}
-\makeatother
 \hypersetup{
     pdfborder = {0 0 0}
 }
@@ -72,9 +53,6 @@
 % --------------------------------
 
 \usepackage[english]{babel}
-\title{Title}
-\author{Author}
-\date{\today}
 
 % --------------------------------
 %            CONFIG END

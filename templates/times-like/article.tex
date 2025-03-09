@@ -1,8 +1,6 @@
 % Copyright (c) 2024-2025 Josias Beem
 % SPDX-License-Identifier: MIT
 
-% Compile with XeLaTeX or LuaLaTeX
-
 % --------------------------------
 %           CONFIG START
 % --------------------------------
@@ -15,23 +13,21 @@
 
 \usepackage{
     amsmath,
+    bookmark,
     cancel,
     csquotes,
     enumitem,
-    fontspec,
     graphicx,
     hyperref,
     listings,
     microtype,
     multicol,
-    unicode-math,
     xcolor
 }
 
-\setmainfont{TeX Gyre Termes}
-\setmathfont{TeX Gyre Termes Math}
-\setsansfont{TeX Gyre Heros}
-\setmonofont{TeX Gyre Cursor}
+% Fonts config
+\usepackage{newtxtext, newtxmath, tgcursor}
+\usepackage[T1]{fontenc}
 
 % Title page config
 \makeatletter
