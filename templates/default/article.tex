@@ -7,9 +7,8 @@
 
 \documentclass[
     paper = a4,
-    parskip = full,
-    DIV = 10,
-    10pt
+    DIV = 12,
+    12pt
 ]{scrartcl}
 
 \usepackage{
@@ -24,25 +23,22 @@
     xcolor
 }
 
-% titlepage config
+% Title page config
 \makeatletter
 \AtBeginDocument{
     \begin{titlepage}
         \centering
         \vspace*{3cm}
-        {\Huge\bfseries\textsf{\@title}\par}
-        \vspace{0.5cm}
-        {\Large\itshape\textsf{\@subtitle}\par}
+        {\Huge\@title\par}
         \vspace{2cm}
-        {\Large\textsf{\@author}\par}
+        {\LARGE\@author\par}
         \vspace{2cm}
-        {\large\textsf{\@date}\par}
-        \vspace{4cm}
+        {\large\@date\par}
     \end{titlepage}
 }
 \makeatother
 
-% listings config
+% Listings config
 \lstset{
     basicstyle = \linespread{1.2}\ttfamily,
     stringstyle = \color{gray},
@@ -52,7 +48,7 @@
     belowskip = 0em
 }
 
-% hyperref config
+% Hyperref config
 \makeatletter
 \AtBeginDocument{
     \hypersetup{
@@ -71,7 +67,6 @@
 
 \usepackage[english]{babel}
 \title{Title}
-\subtitle{Subtitle}
 \author{Author}
 \date{\today}
 
