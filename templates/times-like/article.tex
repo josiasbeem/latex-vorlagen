@@ -26,9 +26,7 @@
 }
 
 % Fonts config
-\usepackage{lmodern}
-\usepackage{newtxtext, newtxmath}
-\renewcommand{\ttdefault}{lmtt}
+\usepackage{newtxtext, newtxmath, newtxtt}
 \DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
 \usepackage{latexsym}
 \usepackage[T1]{fontenc}
@@ -87,5 +85,19 @@
 \begin{document}
 
 % ...
+
+Und am Ende des Tages wird es keinen Unterschied machen \dots
+
+\begin{lstlisting}
+int main() {
+    for (int i = 0; i < 3; i++) {
+        printf("hello world");
+    }
+
+    return 0;
+}
+\end{lstlisting}
+
+Das ist natürlich großartig.
 
 \end{document}
