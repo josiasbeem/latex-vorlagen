@@ -6,6 +6,8 @@ This repository includes **three templates** that differ in the following proper
 
 | Property            | `article.tex` | `assignment.tex` | `blank.tex` |
 | ------------------- | :-----------: | :--------------: | :---------: |
+| Block paragraphs    |               | ✅               | ✅          |
+| Indented paragraphs | ✅            |                  |             |
 | Info in page header |               | ✅               |             |
 | Info in title page  | ✅            |                  |             |
 | Page numbering      | ✅            | ✅               |             |
@@ -14,9 +16,9 @@ This repository includes **three templates** that differ in the following proper
 You can also choose between the **following variants**, which only **differ in the fonts**:
 
 - [Default LaTeX](./templates/default/)
-- [IBM Plex](./templates/ibm-plex/)
+- [TeX Gyre](./templates/tex-gyre/)
 
-⚠️ **Note:** The templates that use the **IBM Plex** fonts must be compiled with **XeLaTeX** or **LuaLaTeX**.
+⚠️ **Note:** The templates that use the **TeX Gyre** fonts must be compiled with **XeLaTeX** or **LuaLaTeX**.
 
 ## License
 
