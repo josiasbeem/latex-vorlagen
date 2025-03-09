@@ -7,9 +7,10 @@
 
 \documentclass[
     paper = a4,
+    DIV = 12,
+    12pt,
     parskip = full,
-    DIV = 10,
-    10pt
+    headsepline
 ]{scrartcl}
 
 \usepackage{
@@ -27,12 +28,13 @@
 
 \setcounter{secnumdepth}{0}
 
+% Page header config
 \makeatletter
-\ihead{\@author}
-\ohead{\@title}
+\ihead{\textnormal{\@author}}
+\ohead{\textnormal{\@title}}
 \makeatother
 
-% listings config
+% Listings config
 \lstset{
     basicstyle = \linespread{1.2}\ttfamily,
     stringstyle = \color{gray},
@@ -42,7 +44,7 @@
     belowskip = 0em
 }
 
-% hyperref config
+% Hyperref config
 \makeatletter
 \AtBeginDocument{
     \hypersetup{
