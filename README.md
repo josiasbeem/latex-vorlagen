@@ -15,10 +15,8 @@ This repository includes **three templates** that differ in the following proper
 
 You can also choose between the **following variants**, which only **differ in the fonts**:
 
-- [Default LaTeX](./templates/default/)
-- [TeX Gyre](./templates/tex-gyre/)
-
-⚠️ **Note:** The templates that use the **TeX Gyre** fonts must be compiled with **XeLaTeX** or **LuaLaTeX**.
+- [Default](./templates/default/)
+- [Times-like](./templates/times-like/)
 
 ## License
 
