@@ -9,8 +9,7 @@
     paper = a4,
     DIV = 12,
     12pt,
-    parskip = full,
-    headsepline
+    parskip = full
 ]{scrartcl}
 
 \usepackage{
@@ -39,8 +38,10 @@
 
 % Page header config
 \makeatletter
-\ihead{\textnormal{\@author}}
-\ohead{\textnormal{\@title}}
+\ihead{\@author}
+\chead{\@title}
+\ohead{\pagename~\thepage}
+\cfoot{}
 \makeatother
 
 % Listings config
