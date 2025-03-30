@@ -4,7 +4,7 @@ A collection of **sane LaTeX templates** to focus more on content rather than fo
 
 This repository includes **three templates** that differ in the following properties:
 
-| Property            | `article.tex` | `assignment.tex` | `blank.tex` |
+| Property            | Article | Assignment | Blank |
 | ------------------- | :-----------: | :--------------: | :---------: |
 | Block paragraphs    |               | ✅               | ✅          |
 | Indented paragraphs | ✅            |                  |             |
@@ -13,10 +13,26 @@ This repository includes **three templates** that differ in the following proper
 | Page numbering      | ✅            | ✅               |             |
 | Section Numbering   | ✅            |                  |             |
 
-You can also choose between the **following variants**, which only **differ in the fonts**:
+Depending on your **language** and your **preferred font**, you can choose from the following:
 
-- [Default](./templates/default/)
-- [Times-like](./templates/times-like/)
+- English
+    - Default font
+        - [Article](./templates/english/default/article.tex)
+        - [Assignment](./templates/english/default/assignment.tex)
+        - [Blank](./templates/english/default/blank.tex)
+    - Times-like font
+        - [Article](./templates/english/times-like/article.tex)
+        - [Assignment](./templates/english/times-like/assignment.tex)
+        - [Blank](./templates/english/times-like/blank.tex)
+- German
+    - Default font
+        - [Article](./templates/german/default/article.tex)
+        - [Assignment](./templates/german/default/assignment.tex)
+        - [Blank](./templates/german/default/blank.tex)
+    - Times-like font
+        - [Article](./templates/german/times-like/article.tex)
+        - [Assignment](./templates/german/times-like/assignment.tex)
+        - [Blank](./templates/german/times-like/blank.tex)
 
 ## License
 

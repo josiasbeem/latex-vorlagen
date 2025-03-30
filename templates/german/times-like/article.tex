@@ -2,19 +2,18 @@
 % SPDX-License-Identifier: MIT
 
 % --------------------------------
-%           CONFIG START
+%       KONFIGURATIONSBEGINN
 % --------------------------------
 
 \documentclass[
     paper = a4,
     DIV = 12,
-    12pt,
-    parskip = full
+    12pt
 ]{scrartcl}
 
+\usepackage[ngerman]{babel}
 \usepackage{
     amsmath,
-    amssymb,
     bookmark,
     cancel,
     csquotes,
@@ -22,26 +21,36 @@
     graphicx,
     hyperref,
     listings,
-    mathtools,
     microtype,
     multicol,
-    scrlayer-scrpage,
     siunitx,
     textualicomma,
     xcolor
 }
 
-\setcounter{secnumdepth}{0}
+% Schriftarten
+\usepackage{newtxtext, newtxmath, newtxtt}
+\DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
+\usepackage[T1]{fontenc}
+\let\Bbbk\relax
+\usepackage{amssymb}
 
-% Page header config
+% Titelblatt
 \makeatletter
-\ihead{\@author}
-\chead{\@title}
-\ohead{\pagename~\thepage}
-\cfoot{}
+\AtBeginDocument{
+    \begin{titlepage}
+        \centering
+        \vspace*{3cm}
+        {\Huge\@title\par}
+        \vspace{2cm}
+        {\LARGE\@author\par}
+        \vspace{2cm}
+        {\large\@date\par}
+    \end{titlepage}
+}
 \makeatother
 
-% Listings config
+% Listings
 \lstset{
     basicstyle = \linespread{1.2}\ttfamily,
     stringstyle = \color{gray},
@@ -51,7 +60,7 @@
     belowskip = 0em
 }
 
-% Hyperref config
+% Hyperref
 \makeatletter
 \AtBeginDocument{
     \hypersetup{
@@ -64,20 +73,34 @@
     pdfborder = {0 0 0}
 }
 
-% --------------------------------
-%          CUSTOMIZATION
-% --------------------------------
-
-\usepackage[english]{babel}
-\title{Title}
-\author{Author}
+\sisetup{
+    locale = DE
+}
 
 % --------------------------------
-%            CONFIG END
+%        KONFIGURATIONSENDE
 % --------------------------------
+
+\title{Titel}
+\author{Autor}
+\date{\today}
 
 \begin{document}
 
 % ...
+
+Und am Ende des Tages wird es keinen Unterschied machen \dots
+
+\begin{lstlisting}
+int main() {
+    for (int i = 0; i < 3; i++) {
+        printf("hello world");
+    }
+
+    return 0;
+}
+\end{lstlisting}
+
+Das ist natürlich großartig.
 
 \end{document}

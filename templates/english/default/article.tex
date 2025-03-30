@@ -8,10 +8,10 @@
 \documentclass[
     paper = a4,
     DIV = 12,
-    12pt,
-    parskip = full
+    12pt
 ]{scrartcl}
 
+\usepackage[english]{babel}
 \usepackage{
     amsmath,
     amssymb,
@@ -26,12 +26,23 @@
     microtype,
     multicol,
     siunitx,
-    textualicomma,
     xcolor
 }
 
-\pagenumbering{gobble}
-\setcounter{secnumdepth}{0}
+% Title page config
+\makeatletter
+\AtBeginDocument{
+    \begin{titlepage}
+        \centering
+        \vspace*{3cm}
+        {\Huge\@title\par}
+        \vspace{2cm}
+        {\LARGE\@author\par}
+        \vspace{2cm}
+        {\large\@date\par}
+    \end{titlepage}
+}
+\makeatother
 
 % Listings config
 \lstset{
@@ -44,19 +55,25 @@
 }
 
 % Hyperref config
+\makeatletter
+\AtBeginDocument{
+    \hypersetup{
+        pdftitle = {\@title},
+        pdfauthor = {\@author}
+    }
+}
+\makeatother
 \hypersetup{
     pdfborder = {0 0 0}
 }
 
 % --------------------------------
-%          CUSTOMIZATION
-% --------------------------------
-
-\usepackage[english]{babel}
-
-% --------------------------------
 %            CONFIG END
 % --------------------------------
+
+\title{Title}
+\author{Author}
+\date{\today}
 
 \begin{document}
 

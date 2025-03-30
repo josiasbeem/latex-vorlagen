@@ -8,9 +8,11 @@
 \documentclass[
     paper = a4,
     DIV = 12,
-    12pt
+    12pt,
+    parskip = full
 ]{scrartcl}
 
+\usepackage[english]{babel}
 \usepackage{
     amsmath,
     amssymb,
@@ -24,24 +26,19 @@
     mathtools,
     microtype,
     multicol,
+    scrlayer-scrpage,
     siunitx,
-    textualicomma,
     xcolor
 }
 
-% Title page config
+\setcounter{secnumdepth}{0}
+
+% Page header config
 \makeatletter
-\AtBeginDocument{
-    \begin{titlepage}
-        \centering
-        \vspace*{3cm}
-        {\Huge\@title\par}
-        \vspace{2cm}
-        {\LARGE\@author\par}
-        \vspace{2cm}
-        {\large\@date\par}
-    \end{titlepage}
-}
+\ihead{\@author}
+\chead{\@title}
+\ohead{\pagename~\thepage}
+\cfoot{}
 \makeatother
 
 % Listings config
@@ -68,17 +65,11 @@
 }
 
 % --------------------------------
-%          CUSTOMIZATION
-% --------------------------------
-
-\usepackage[english]{babel}
-\title{Title}
-\author{Author}
-\date{\today}
-
-% --------------------------------
 %            CONFIG END
 % --------------------------------
+
+\title{Title}
+\author{Author}
 
 \begin{document}
 

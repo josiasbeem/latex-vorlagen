@@ -1,0 +1,101 @@
+% Copyright (c) 2024-2025 Josias Beem
+% SPDX-License-Identifier: MIT
+
+% --------------------------------
+%           CONFIG START
+% --------------------------------
+
+\documentclass[
+    paper = a4,
+    DIV = 12,
+    12pt
+]{scrartcl}
+
+\usepackage[english]{babel}
+\usepackage{
+    amsmath,
+    bookmark,
+    cancel,
+    csquotes,
+    enumitem,
+    graphicx,
+    hyperref,
+    listings,
+    microtype,
+    multicol,
+    siunitx,
+    xcolor
+}
+
+% Fonts config
+\usepackage{newtxtext, newtxmath, newtxtt}
+\DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
+\usepackage[T1]{fontenc}
+\let\Bbbk\relax
+\usepackage{amssymb}
+
+% Title page config
+\makeatletter
+\AtBeginDocument{
+    \begin{titlepage}
+        \centering
+        \vspace*{3cm}
+        {\Huge\@title\par}
+        \vspace{2cm}
+        {\LARGE\@author\par}
+        \vspace{2cm}
+        {\large\@date\par}
+    \end{titlepage}
+}
+\makeatother
+
+% Listings config
+\lstset{
+    basicstyle = \linespread{1.2}\ttfamily,
+    stringstyle = \color{gray},
+    commentstyle = \itshape\color{gray},
+    showstringspaces = false,
+    aboveskip = 1em,
+    belowskip = 0em
+}
+
+% Hyperref config
+\makeatletter
+\AtBeginDocument{
+    \hypersetup{
+        pdftitle = {\@title},
+        pdfauthor = {\@author}
+    }
+}
+\makeatother
+\hypersetup{
+    pdfborder = {0 0 0}
+}
+
+% --------------------------------
+%            CONFIG END
+% --------------------------------
+
+\title{Title}
+\author{Author}
+\date{\today}
+
+\begin{document}
+
+% ...
+
+Und am Ende des Tages wird es keinen Unterschied machen \dots
+
+\begin{lstlisting}
+int main() {
+    for (int i = 0; i < 3; i++) {
+        printf("hello world");
+    }
+
+    return 0;
+}
+\end{lstlisting}
+
+Das ist natürlich großartig.
+
+\end{document}

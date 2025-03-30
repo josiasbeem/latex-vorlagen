@@ -1,0 +1,69 @@
+% Copyright (c) 2024-2025 Josias Beem
+% SPDX-License-Identifier: MIT
+
+% --------------------------------
+%       KONFIGURATIONSBEGINN
+% --------------------------------
+
+\documentclass[
+    paper = a4,
+    DIV = 12,
+    12pt,
+    parskip = full
+]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage{
+    amsmath,
+    bookmark,
+    cancel,
+    csquotes,
+    enumitem,
+    graphicx,
+    hyperref,
+    listings,
+    microtype,
+    multicol,
+    siunitx,
+    textualicomma,
+    xcolor
+}
+
+% Schriftarten
+\usepackage{newtxtext, newtxmath, newtxtt}
+\DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
+\usepackage[T1]{fontenc}
+\let\Bbbk\relax
+\usepackage{amssymb}
+
+\pagenumbering{gobble}
+\setcounter{secnumdepth}{0}
+
+% Listings
+\lstset{
+    basicstyle = \linespread{1.2}\ttfamily,
+    stringstyle = \color{gray},
+    commentstyle = \itshape\color{gray},
+    showstringspaces = false,
+    aboveskip = 1em,
+    belowskip = 0em
+}
+
+% Hyperref
+\hypersetup{
+    pdfborder = {0 0 0}
+}
+
+\sisetup{
+    locale = DE
+}
+
+% --------------------------------
+%        KONFIGURATIONSENDE
+% --------------------------------
+
+\begin{document}
+
+% ...
+
+\end{document}

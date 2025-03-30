@@ -1,0 +1,83 @@
+% Copyright (c) 2024-2025 Josias Beem
+% SPDX-License-Identifier: MIT
+
+% --------------------------------
+%           CONFIG START
+% --------------------------------
+
+\documentclass[
+    paper = a4,
+    DIV = 12,
+    12pt,
+    parskip = full
+]{scrartcl}
+
+\usepackage[english]{babel}
+\usepackage{
+    amsmath,
+    bookmark,
+    cancel,
+    csquotes,
+    enumitem,
+    graphicx,
+    hyperref,
+    listings,
+    microtype,
+    multicol,
+    scrlayer-scrpage,
+    siunitx,
+    xcolor
+}
+
+% Fonts config
+\usepackage{newtxtext, newtxmath, newtxtt}
+\DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
+\usepackage[T1]{fontenc}
+\let\Bbbk\relax
+\usepackage{amssymb}
+
+\setcounter{secnumdepth}{0}
+
+% Page header config
+\makeatletter
+\ihead{\@author}
+\chead{\@title}
+\ohead{\pagename~\thepage}
+\cfoot{}
+\makeatother
+
+% Listings config
+\lstset{
+    basicstyle = \linespread{1.2}\ttfamily,
+    stringstyle = \color{gray},
+    commentstyle = \itshape\color{gray},
+    showstringspaces = false,
+    aboveskip = 1em,
+    belowskip = 0em
+}
+
+% Hyperref config
+\makeatletter
+\AtBeginDocument{
+    \hypersetup{
+        pdftitle = {\@title},
+        pdfauthor = {\@author}
+    }
+}
+\makeatother
+\hypersetup{
+    pdfborder = {0 0 0}
+}
+
+% --------------------------------
+%            CONFIG END
+% --------------------------------
+
+\title{Title}
+\author{Author}
+
+\begin{document}
+
+% ...
+
+\end{document}

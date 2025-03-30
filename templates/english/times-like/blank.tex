@@ -12,6 +12,7 @@
     parskip = full
 ]{scrartcl}
 
+\usepackage[english]{babel}
 \usepackage{
     amsmath,
     bookmark,
@@ -23,9 +24,7 @@
     listings,
     microtype,
     multicol,
-    scrlayer-scrpage,
     siunitx,
-    textualicomma,
     xcolor
 }
 
@@ -36,15 +35,8 @@
 \let\Bbbk\relax
 \usepackage{amssymb}
 
+\pagenumbering{gobble}
 \setcounter{secnumdepth}{0}
-
-% Page header config
-\makeatletter
-\ihead{\@author}
-\chead{\@title}
-\ohead{\pagename~\thepage}
-\cfoot{}
-\makeatother
 
 % Listings config
 \lstset{
@@ -57,25 +49,9 @@
 }
 
 % Hyperref config
-\makeatletter
-\AtBeginDocument{
-    \hypersetup{
-        pdftitle = {\@title},
-        pdfauthor = {\@author}
-    }
-}
-\makeatother
 \hypersetup{
     pdfborder = {0 0 0}
 }
-
-% --------------------------------
-%          CUSTOMIZATION
-% --------------------------------
-
-\usepackage[english]{babel}
-\title{Title}
-\author{Author}
 
 % --------------------------------
 %            CONFIG END

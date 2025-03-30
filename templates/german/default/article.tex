@@ -2,7 +2,7 @@
 % SPDX-License-Identifier: MIT
 
 % --------------------------------
-%           CONFIG START
+%       KONFIGURATIONSBEGINN
 % --------------------------------
 
 \documentclass[
@@ -11,8 +11,10 @@
     12pt
 ]{scrartcl}
 
+\usepackage[ngerman]{babel}
 \usepackage{
     amsmath,
+    amssymb,
     bookmark,
     cancel,
     csquotes,
@@ -20,6 +22,7 @@
     graphicx,
     hyperref,
     listings,
+    mathtools,
     microtype,
     multicol,
     siunitx,
@@ -27,14 +30,7 @@
     xcolor
 }
 
-% Fonts config
-\usepackage{newtxtext, newtxmath, newtxtt}
-\DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
-\usepackage[T1]{fontenc}
-\let\Bbbk\relax
-\usepackage{amssymb}
-
-% Title page config
+% Titelblatt
 \makeatletter
 \AtBeginDocument{
     \begin{titlepage}
@@ -49,7 +45,7 @@
 }
 \makeatother
 
-% Listings config
+% Listings
 \lstset{
     basicstyle = \linespread{1.2}\ttfamily,
     stringstyle = \color{gray},
@@ -59,7 +55,7 @@
     belowskip = 0em
 }
 
-% Hyperref config
+% Hyperref
 \makeatletter
 \AtBeginDocument{
     \hypersetup{
@@ -72,35 +68,20 @@
     pdfborder = {0 0 0}
 }
 
+\sisetup{
+    locale = DE
+}
+
 % --------------------------------
-%          CUSTOMIZATION
+%        KONFIGURATIONSENDE
 % --------------------------------
 
-\usepackage[english]{babel}
-\title{Title}
-\author{Author}
+\title{Titel}
+\author{Autor}
 \date{\today}
-
-% --------------------------------
-%            CONFIG END
-% --------------------------------
 
 \begin{document}
 
 % ...
-
-Und am Ende des Tages wird es keinen Unterschied machen \dots
-
-\begin{lstlisting}
-int main() {
-    for (int i = 0; i < 3; i++) {
-        printf("hello world");
-    }
-
-    return 0;
-}
-\end{lstlisting}
-
-Das ist natürlich großartig.
 
 \end{document}
