@@ -14,6 +14,7 @@
 \usepackage[ngerman]{babel}
 \usepackage{
     amsmath,
+    amsthm,
     bookmark,
     cancel,
     csquotes,
@@ -33,6 +34,7 @@
 \usepackage[T1]{fontenc}
 \let\Bbbk\relax
 \usepackage{amssymb}
+\renewcommand{\qed}{\hfill\ensuremath{\Box}}
 
 % Titelblatt
 \makeatletter
@@ -56,7 +58,9 @@
     commentstyle = \itshape\color{gray},
     showstringspaces = false,
     aboveskip = 1em,
-    belowskip = 0em
+    belowskip = 0em,
+    numbers = left,
+    numberstyle=\ttfamily\small\color{gray}
 }
 
 % Hyperref
