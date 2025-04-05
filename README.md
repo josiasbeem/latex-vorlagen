@@ -1,10 +1,10 @@
 # LaTeX Templates
 
-A collection of **sane LaTeX templates** to focus more on content rather than formatting.
+A collection of **sane LaTeX templates** so you can focus more on content and less on formatting.
 
 This repository includes **three templates** that differ in the following properties:
 
-| Property            | Article | Assignment | Blank |
+| Property            | Article       | Assignment       | Blank       |
 | ------------------- | :-----------: | :--------------: | :---------: |
 | Block paragraphs    |               | ✅               | ✅          |
 | Indented paragraphs | ✅            |                  |             |
@@ -13,26 +13,16 @@ This repository includes **three templates** that differ in the following proper
 | Page numbering      | ✅            | ✅               |             |
 | Section Numbering   | ✅            |                  |             |
 
-Depending on your **language** and your **preferred font**, you can choose from the following:
+Depending on your **language**, you can choose from the following:
 
 - English
-    - Default font
-        - [Article](./templates/english/default/article.tex)
-        - [Assignment](./templates/english/default/assignment.tex)
-        - [Blank](./templates/english/default/blank.tex)
-    - Times-like font
-        - [Article](./templates/english/times-like/article.tex)
-        - [Assignment](./templates/english/times-like/assignment.tex)
-        - [Blank](./templates/english/times-like/blank.tex)
+    - [Article](./templates/english/article.tex)
+    - [Assignment](./templates/english/assignment.tex)
+    - [Blank](./templates/english/blank.tex)
 - German
-    - Default font
-        - [Article](./templates/german/default/article.tex)
-        - [Assignment](./templates/german/default/assignment.tex)
-        - [Blank](./templates/german/default/blank.tex)
-    - Times-like font
-        - [Article](./templates/german/times-like/article.tex)
-        - [Assignment](./templates/german/times-like/assignment.tex)
-        - [Blank](./templates/german/times-like/blank.tex)
+    - [Article](./templates/german/article.tex)
+    - [Assignment](./templates/german/assignment.tex)
+    - [Blank](./templates/german/blank.tex)
 
 ## License
 
