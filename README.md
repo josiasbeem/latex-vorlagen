@@ -6,7 +6,6 @@ This repository includes **three templates** that differ in the following proper
 
 | Property            | Article       | Assignment       | Blank       |
 | ------------------- | :-----------: | :--------------: | :---------: |
-| Block paragraphs    |               | ✅               | ✅          |
 | Indented paragraphs | ✅            |                  |             |
 | Info in page header |               | ✅               |             |
 | Info in title page  | ✅            |                  |             |
