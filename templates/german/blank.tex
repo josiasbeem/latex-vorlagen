@@ -15,7 +15,6 @@
 \usepackage[ngerman]{babel}
 \usepackage{
     amsmath,
-    amsthm,
     bookmark,
     cancel,
     csquotes,
@@ -30,13 +29,13 @@
     xcolor
 }
 
-% Schriftarten
+% Schriftarten und restliche Pakete
 \usepackage{newtxtext, newtxmath, newtxtt}
 \DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
 \usepackage[T1]{fontenc}
 \let\Bbbk\relax
 \usepackage{amssymb}
-\renewcommand{\qed}{\hfill\ensuremath{\Box}}
+\usepackage[thmmarks]{ntheorem}
 
 \pagenumbering{gobble}
 \setcounter{secnumdepth}{0}
@@ -61,6 +60,18 @@
     pdfborder = {0 0 0}
 }
 
+% Ntheorem
+\theoremheaderfont{\normalfont\sffamily\bfseries}
+\theorembodyfont{\normalfont}
+\theoremseparator{\enspace}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{nonumberplain}
+\theoremsymbol{\ensuremath{\Box}}
+\newtheorem{proof}{Beweis}
+
+% Siunitx
 \sisetup{
     locale = DE
 }
