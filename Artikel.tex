@@ -12,7 +12,7 @@
     parskip = half
 ]{scrartcl}
 
-\usepackage[ngerman]{babel}
+\usepackage[naustrian]{babel}
 \usepackage{
     amsmath,
     bookmark,
@@ -29,29 +29,29 @@
     xcolor
 }
 
-% Schriftarten und restliche Pakete
+% Schriftarten
 \usepackage{newtxtext, newtxmath, newtxtt}
 \DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
 \newcommand{\contradiction}{\hfill\ensuremath{\lightning}}
 \usepackage[T1]{fontenc}
 \let\Bbbk\relax
+
+% Restliche Pakete
 \usepackage{amssymb}
 \usepackage[thmmarks]{ntheorem}
 
-% Titelblatt
-\makeatletter
-\AtBeginDocument{
-    \begin{titlepage}
-        \centering
-        \vspace*{3cm}
-        {\Huge\@title\par}
-        \vspace{2cm}
-        {\LARGE\@author\par}
-        \vspace{2cm}
-        {\large\@date\par}
-    \end{titlepage}
-}
-\makeatother
+% Weitere Teile serifenlos setzen
+\DeclareTOCStyleEntry[
+    entryformat=\sffamily,
+    entrynumberformat=\sffamily,
+    pagenumberformat=\sffamily
+]{tocline}{subsection}
+\DeclareTOCStyleEntry[
+    entryformat=\sffamily,
+    entrynumberformat=\sffamily,
+    pagenumberformat=\sffamily
+]{tocline}{subsubsection}
+\addtokomafont{pagenumber}{\sffamily}
 
 % Listings
 \lstset{
@@ -68,19 +68,6 @@
     numberstyle = \ttfamily\small
 }
 
-% Hyperref
-\makeatletter
-\AtBeginDocument{
-    \hypersetup{
-        pdftitle = {\@title},
-        pdfauthor = {\@author}
-    }
-}
-\makeatother
-\hypersetup{
-    pdfborder = {0 0 0}
-}
-
 % Ntheorem
 \theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\normalfont}
@@ -92,10 +79,42 @@
 \theoremsymbol{\ensuremath{\Box}}
 \newtheorem{proof}{Beweis}
 
+% Hyperref
+\hypersetup{
+    pdfborder = {0 0 0}
+}
+
 % Siunitx
 \sisetup{
     locale = DE
 }
+
+% Besonderheiten dieser Dokumentvariante
+\makeatletter
+\AtBeginDocument{
+    \hypersetup{
+        pdftitle = {\@title},
+        pdfauthor = {\@author}
+    }
+}
+\makeatother
+\makeatletter
+\AtBeginDocument{
+    \begin{titlepage}
+        \begin{flushright}
+            \vspace*{5cm}
+            {\sffamily\bfseries\fontsize{24}{28}\selectfont\@title\par}
+            \vspace{1.5cm}
+            {\sffamily\fontsize{16}{20}\selectfont\@subtitle\par}
+            \vspace{4cm}
+            {\sffamily\fontsize{14}{16}\selectfont\@author\par}
+            \vspace{1cm}
+            {\sffamily\fontsize{12}{14}\selectfont\@date\par}
+        \end{flushright}
+        \vfill
+    \end{titlepage}
+}
+\makeatother
 
 % --------------------------------
 %        KONFIGURATIONSENDE

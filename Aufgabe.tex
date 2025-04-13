@@ -2,7 +2,7 @@
 % SPDX-License-Identifier: MIT
 
 % --------------------------------
-%           CONFIG START
+%       KONFIGURATIONSBEGINN
 % --------------------------------
 
 \documentclass[
@@ -12,7 +12,7 @@
     parskip = half
 ]{scrartcl}
 
-\usepackage[english]{babel}
+\usepackage[naustrian]{babel}
 \usepackage{
     amsmath,
     bookmark,
@@ -29,29 +29,29 @@
     xcolor
 }
 
-% Fonts and remaining packages
+% Schriftarten
 \usepackage{newtxtext, newtxmath, newtxtt}
 \DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
 \newcommand{\contradiction}{\hfill\ensuremath{\lightning}}
 \usepackage[T1]{fontenc}
 \let\Bbbk\relax
+
+% Restliche Pakete
 \usepackage{amssymb}
 \usepackage[thmmarks]{ntheorem}
 
-% Title page
-\makeatletter
-\AtBeginDocument{
-    \begin{titlepage}
-        \centering
-        \vspace*{3cm}
-        {\Huge\@title\par}
-        \vspace{2cm}
-        {\LARGE\@author\par}
-        \vspace{2cm}
-        {\large\@date\par}
-    \end{titlepage}
-}
-\makeatother
+% Weitere Teile serifenlos setzen
+\DeclareTOCStyleEntry[
+    entryformat=\sffamily,
+    entrynumberformat=\sffamily,
+    pagenumberformat=\sffamily
+]{tocline}{subsection}
+\DeclareTOCStyleEntry[
+    entryformat=\sffamily,
+    entrynumberformat=\sffamily,
+    pagenumberformat=\sffamily
+]{tocline}{subsubsection}
+\addtokomafont{pagenumber}{\sffamily}
 
 % Listings
 \lstset{
@@ -68,19 +68,6 @@
     numberstyle = \ttfamily\small
 }
 
-% Hyperref
-\makeatletter
-\AtBeginDocument{
-    \hypersetup{
-        pdftitle = {\@title},
-        pdfauthor = {\@author}
-    }
-}
-\makeatother
-\hypersetup{
-    pdfborder = {0 0 0}
-}
-
 % Ntheorem
 \theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\normalfont}
@@ -90,15 +77,44 @@
 \newtheorem{lemma}{Lemma}
 \theoremstyle{nonumberplain}
 \theoremsymbol{\ensuremath{\Box}}
-\newtheorem{proof}{Proof}
+\newtheorem{proof}{Beweis}
+
+% Hyperref
+\hypersetup{
+    pdfborder = {0 0 0}
+}
+
+% Siunitx
+\sisetup{
+    locale = DE
+}
+
+% Besonderheiten dieser Dokumentvariante
+\makeatletter
+\AtBeginDocument{
+    \hypersetup{
+        pdftitle = {\@title},
+        pdfauthor = {\@author}
+    }
+}
+\makeatother
+\setcounter{secnumdepth}{0}
+\usepackage{scrlayer-scrpage}
+\KOMAoptions{headsepline = true}
+\makeatletter
+\ihead{\normalfont\sffamily\@title}
+\ohead{\normalfont\sffamily\@author}
+\makeatother
+\hypersetup{
+    pdfborder = {0 0 0}
+}
 
 % --------------------------------
-%            CONFIG END
+%        KONFIGURATIONSENDE
 % --------------------------------
 
-\title{Title}
-\author{Author}
-\date{\today}
+\title{Titel}
+\author{Autor}
 
 \begin{document}
 

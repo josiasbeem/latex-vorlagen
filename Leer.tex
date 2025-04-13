@@ -12,7 +12,7 @@
     parskip = half
 ]{scrartcl}
 
-\usepackage[ngerman]{babel}
+\usepackage[naustrian]{babel}
 \usepackage{
     amsmath,
     bookmark,
@@ -24,30 +24,34 @@
     listings,
     microtype,
     multicol,
-    scrlayer-scrpage,
     siunitx,
     stmaryrd,
     xcolor
 }
 
-% Schriftarten und restliche Pakete
+% Schriftarten
 \usepackage{newtxtext, newtxmath, newtxtt}
 \DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
 \newcommand{\contradiction}{\hfill\ensuremath{\lightning}}
 \usepackage[T1]{fontenc}
 \let\Bbbk\relax
+
+% Restliche Pakete
 \usepackage{amssymb}
 \usepackage[thmmarks]{ntheorem}
 
-\setcounter{secnumdepth}{0}
-
-% Kopfzeile
-\makeatletter
-\ihead{\itshape\@author}
-\chead{\itshape\@title}
-\ohead{\itshape\pagename~\thepage}
-\cfoot{}
-\makeatother
+% Weitere Teile serifenlos setzen
+\DeclareTOCStyleEntry[
+    entryformat=\sffamily,
+    entrynumberformat=\sffamily,
+    pagenumberformat=\sffamily
+]{tocline}{subsection}
+\DeclareTOCStyleEntry[
+    entryformat=\sffamily,
+    entrynumberformat=\sffamily,
+    pagenumberformat=\sffamily
+]{tocline}{subsubsection}
+\addtokomafont{pagenumber}{\sffamily}
 
 % Listings
 \lstset{
@@ -64,19 +68,6 @@
     numberstyle = \ttfamily\small
 }
 
-% Hyperref
-\makeatletter
-\AtBeginDocument{
-    \hypersetup{
-        pdftitle = {\@title},
-        pdfauthor = {\@author}
-    }
-}
-\makeatother
-\hypersetup{
-    pdfborder = {0 0 0}
-}
-
 % Ntheorem
 \theoremheaderfont{\normalfont\sffamily\bfseries}
 \theorembodyfont{\normalfont}
@@ -88,17 +79,26 @@
 \theoremsymbol{\ensuremath{\Box}}
 \newtheorem{proof}{Beweis}
 
+% Hyperref
+\hypersetup{
+    pdfborder = {0 0 0}
+}
+
 % Siunitx
 \sisetup{
     locale = DE
 }
 
+% Besonderheiten dieser Dokumentvariante
+\pagenumbering{gobble}
+\setcounter{secnumdepth}{0}
+\hypersetup{
+    pdfborder = {0 0 0}
+}
+
 % --------------------------------
 %        KONFIGURATIONSENDE
 % --------------------------------
-
-\title{Titel}
-\author{Autor}
 
 \begin{document}
 

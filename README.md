@@ -1,30 +1,20 @@
-# LaTeX Templates
+# LaTeX Vorlagen
 
-A collection of **sane LaTeX templates** so you can focus more on content and less on formatting.
+Eine Sammlung **pragmatischer LaTeX Vorlagen**, damit Sie Ihre kreative Energie für den Inhalt nutzen können.
 
-This repository includes **three templates** that differ in the following properties:
+Dieses Git-Repository enthält **drei Vorlagen**, die sich in folgenden Eigenschaften unterscheiden:
 
-| Property            | Article       | Assignment       | Blank       |
-| ------------------- | :-----------: | :--------------: | :---------: |
-| Indented paragraphs | ✅            |                  |             |
-| Info in page header |               | ✅               |             |
-| Info in title page  | ✅            |                  |             |
-| Page numbering      | ✅            | ✅               |             |
-| Section Numbering   | ✅            |                  |             |
+| Eigenschaft             | [Artikel](./Aufgabe.tex) | [Aufgabe](./Aufgabe.tex) | [Leer](./Leer.tex)        |
+| ----------------------- | :----------------------: | :----------------------: | :-----------------------: |
+| Info in der Kopfzeile   |                          | ✅                       |                           |
+| Info auf dem Titelblatt | ✅                       |                          |                           |
+| Seitennummerierung      | ✅                       | ✅                       |                           |
+| Abschnittsnummerierung  | ✅                       |                          |                           |
 
-Depending on your **language**, you can choose from the following:
-
-- English
-    - [Article](./templates/english/article.tex)
-    - [Assignment](./templates/english/assignment.tex)
-    - [Blank](./templates/english/blank.tex)
-- German
-    - [Article](./templates/german/article.tex)
-    - [Assignment](./templates/german/assignment.tex)
-    - [Blank](./templates/german/blank.tex)
-
-## License
+## Lizenz
 
 Copyright © 2024-2025 Josias Beem
 
-This project is licensed under the **MIT License** - see the `LICENSE` file for details.
+Dieses Projekt wird unter den Bedingungen der **MIT-Lizenz** bereitgestellt.
+
+In der beigefügten Datei `LICENSE` finden Sie weiterführende Informationen.
