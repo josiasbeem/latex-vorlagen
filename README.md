@@ -2,14 +2,13 @@
 
 Eine Sammlung **pragmatischer LaTeX Vorlagen**, damit Sie Ihre kreative Energie für den Inhalt nutzen können.
 
-Dieses Git-Repository enthält **drei Vorlagen**, die sich in folgenden Eigenschaften unterscheiden:
+Dieses Git-Repository enthält **zwei Vorlagen**, die sich in folgenden Eigenschaften unterscheiden:
 
-| Eigenschaft             | [Artikel](./Aufgabe.tex) | [Aufgabe](./Aufgabe.tex) | [Leer](./Leer.tex)        |
-| ----------------------- | :----------------------: | :----------------------: | :-----------------------: |
-| Info in der Kopfzeile   |                          | ✅                       |                           |
-| Info auf dem Titelblatt | ✅                       |                          |                           |
-| Seitennummerierung      | ✅                       | ✅                       |                           |
-| Abschnittsnummerierung  | ✅                       |                          |                           |
+| Eigenschaft             | [Artikel](./Artikel.tex) | [Leer](./Leer.tex) |
+| ----------------------- | :----------------------: | :----------------: |
+| Titelblatt              | ✅                       |                    |
+| Seitennummerierung      | ✅                       |                    |
+| Abschnittsnummerierung  | ✅                       |                    |
 
 ## Lizenz
 
