@@ -6,10 +6,10 @@
 % --------------------------------
 
 \documentclass[
-    paper = a4,
-    DIV = 12,
+    paper=a4,
+    DIV=12,
     12pt,
-    parskip = half
+    parskip=half
 ]{scrartcl}
 
 \usepackage[naustrian]{babel}
@@ -21,7 +21,6 @@
     enumitem,
     graphicx,
     hyperref,
-    listings,
     microtype,
     multicol,
     siunitx,
@@ -39,6 +38,7 @@
 % Restliche Pakete
 \usepackage{amssymb}
 \usepackage[thmmarks]{ntheorem}
+\usepackage[cache=false]{minted}
 
 % Weitere Teile serifenlos setzen
 \DeclareTOCStyleEntry[
@@ -53,19 +53,12 @@
 ]{tocline}{subsubsection}
 \addtokomafont{pagenumber}{\sffamily}
 
-% Listings
-\lstset{
-    basicstyle = \linespread{1.2}\ttfamily,
-    stringstyle = \color{gray},
-    commentstyle = \itshape\color{gray},
-    showstringspaces = false,
-    aboveskip = 1em,
-    belowskip = 0em,
-    numbers = left,
-    frame = single,
-    breaklines = true,
-    breakatwhitespace = true,
-    numberstyle = \ttfamily\small
+% Minted
+\setminted{
+    style=bw,
+    fontsize=\small,
+    baselinestretch=1.2,
+    breaklines=true
 }
 
 % Ntheorem
@@ -81,20 +74,17 @@
 
 % Hyperref
 \hypersetup{
-    pdfborder = {0 0 0}
+    pdfborder={0 0 0}
 }
 
 % Siunitx
 \sisetup{
-    locale = DE
+    locale=DE
 }
 
 % Besonderheiten dieser Dokumentvariante
 \pagenumbering{gobble}
 \setcounter{secnumdepth}{0}
-\hypersetup{
-    pdfborder = {0 0 0}
-}
 
 % --------------------------------
 %        KONFIGURATIONSENDE

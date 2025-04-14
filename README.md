@@ -1,10 +1,10 @@
 # LaTeX Vorlagen
 
-Eine Sammlung **pragmatischer LaTeX Vorlagen**, damit Sie Ihre kreative Energie für den Inhalt nutzen können.
+**Moderne LaTeX Vorlagen**, damit Sie Ihre kreative Energie für den Inhalt nutzen können.
 
 Dieses Git-Repository enthält **zwei Vorlagen**, die sich in folgenden Eigenschaften unterscheiden:
 
-| Eigenschaft             | [Artikel](./Artikel.tex) | [Leer](./Leer.tex) |
+|                         | [Artikel](./Artikel.tex) | [Leer](./Leer.tex) |
 | ----------------------- | :----------------------: | :----------------: |
 | Titelblatt              | ✅                       |                    |
 | Seitennummerierung      | ✅                       |                    |
